@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=EDGE">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Accede a tu cuenta en ElayShop">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Elay Login</title>
+</head>
+<body>
+
+<header>
+    <div class="container header-content">
+        <h1><a href="../index.html" class="header-logo">Elay Shop</a></h1>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="../pages/shop.html">Tienda</a></li>
+                <li><a href="../pages/blog.html">Blog</a></li>
+                <li><a href="../pages/aboutUs.html">Sobre Nosotros</a></li>
+                <li><a href="./login.html" class="active">Login</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<main class="container">
+    <section class="login-form">
+        <h2>Login</h2>
+        <form action="submit-login.php" method="POST">
+            <div class="form-group">
+                <label for="email">Dirección de Correo Electrónico</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Contraseña</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Iniciar Sesión</button>
+        </form>
+        <p><a href="forgot-password.html">¿Olvidaste tu contraseña?</a></p>
+        <p>O inicia sesión con:</p>
+        <div class="social-login">
+            <a href="login-facebook.php">Facebook</a>
+            <a href="login-google.php">Google</a>
+            <a href="login-twitter.php">Twitter</a>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <div class="container">
+        <p>&copy; 2024 ElayShop. Todos los derechos reservados.</p>
+        <div class="social-icons">
+            <img src="../media/logos-rrss/icons8-facebook-nuevo-30.png" alt="Facebook" class="img-fluid">
+            <img src="../media/logos-rrss/icons8-instagram-30.png" alt="Instagram" class="img-fluid">
+            <img src="../media/logos-rrss/icons8-whatsapp-30.png" alt="WhatsApp" class="img-fluid">
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>
