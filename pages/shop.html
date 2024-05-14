@@ -2,60 +2,93 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=EDGE">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Descubre nuestra tienda y explora nuestra amplia gama de productos.">
+    <meta name="keywords" content="moda, tienda, ropa, accesorios, ElayShop, personalizados">
+    <link rel="icon" href="../media/favicon.ico" type="image/x-icon">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="../css/style.css">
     <title>Elay Tienda</title>
 </head>
-<body id="shop">
-    <header>
+<body>
+    <!-- Header -->
+    <header class="bg-dark text-white p-4">
         <div class="container header-content">
-            <h1>Elay Shop</h1>
-            <nav>
-                <ul>
-                    <li><a href="../index.html">Inicio</a></li>
-                    <li><a href="shop.html" class="active">Tienda</a></li>
-                    <li><a href="../pages/blog.html">Blog</a></li>
-                    <li><a href="../pages/aboutUs.html">Sobre Nosotros</a></li>
-                    <li><a href="./login.html">Login</a></li>
-                </ul>
+            <h1><a href="../index.html">Elay Shop</a></h1>
+            <nav class="navbar navbar-expand-lg navbar-dark">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item"><a class="nav-link" href="../index.html">Inicio</a></li>
+                        <li class="nav-item active"><a class="nav-link" href="shop.html">Tienda</a></li>
+                        <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+                        <li class="nav-item"><a class="nav-link" href="aboutUs.html">Sobre Nosotros</a></li>
+                        <li class="nav-item"><a class="nav-link" href="login.html">Login</a></li>
+                    </ul>
+                </div>
             </nav>
         </div>
     </header>
-    <main class="container">
+
+    <!-- Main Content -->
+    <main class="container mt-3 mb-3">
         <section class="product-grid">
-            <div class="product-item">
-                <img src="../media/productos/accesorios.jpg" alt="Producto 1">
-                <h3>Producto 1</h3>
-                <p>Precio: $29.99</p>
-                <button class="btn btn-primary">Añadir al carrito</button>
-            </div>
-            <div class="product-item">
-                <img src="../media/productos/deportiva.jpg" alt="Producto 2">
-                <h3>Producto 2</h3>
-                <p>Precio: $34.99</p>
-                <button class="btn btn-primary">Añadir al carrito</button>
-            </div>
-            <div class="product-item">
-                <img src="../media/productos/regalo.jpg" alt="Producto 3">
-                <h3>Producto 3</h3>
-                <p>Precio: $39.99</p>
-                <button class="btn btn-primary">Añadir al carrito</button>
+            <div class="row">
+                <div class="col-sm-12 col-md-4 mb-3" data-aos="fade-up">
+                    <div class="card">
+                        <img src="../media/productos/accesorios.jpg" alt="Producto 1" class="img-fluid card-img-top">
+                        <div class="card-body">
+                            <h3>Producto 1</h3>
+                            <p>Precio: $29.99</p>
+                            <button class="btn btn-primary">Añadir al carrito</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-4 mb-3" data-aos="fade-up">
+                    <div class="card">
+                        <img src="../media/productos/deportiva.jpg" alt="Producto 2" class="img-fluid card-img-top">
+                        <div class="card-body">
+                            <h3>Producto 2</h3>
+                            <p>Precio: $34.99</p>
+                            <button class="btn btn-primary">Añadir al carrito</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-4 mb-3" data-aos="fade-up">
+                    <div class="card">
+                        <img src="../media/productos/regalo.jpg" alt="Producto 3" class="img-fluid card-img-top">
+                        <div class="card-body">
+                            <h3>Producto 3</h3>
+                            <p>Precio: $39.99</p>
+                            <button class="btn btn-primary">Añadir al carrito</button>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
     </main>
-    
-    <footer>
-        <div class="container">
-            <p>&copy; 2024 ElayShop. Todos los derechos reservados.</p>
-            <div class="social-icons">
-                <img src="../media/logos-rrss/icons8-facebook-nuevo-30.png" alt="Facebook" class="img-fluid">
-                <img src="../media/logos-rrss/icons8-instagram-30.png" alt="Instagram" class="img-fluid">
-                <img src="../media/logos-rrss/icons8-whatsapp-30.png" alt="WhatsApp" class="img-fluid">
-            </div>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center p-3 mt-3">
+        <p>&copy; 2024 ElayShop. Todos los derechos reservados.</p>
+        <div>
+            <img src="../media/logos-rrss/icons8-facebook-nuevo-30.png" alt="Facebook" class="img-fluid">
+            <img src="../media/logos-rrss/icons8-instagram-30.png" alt="Instagram" class="img-fluid">
+            <img src="../media/logos-rrss/icons8-whatsapp-30.png" alt="WhatsApp" class="img-fluid">
         </div>
     </footer>
 
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 </body>
 </html>

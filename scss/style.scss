@@ -1,0 +1,270 @@
+// Variables
+$primary-color: #3498db;
+$secondary-color: #2ecc71;
+$text-color: #333;
+$font-stack: 'Helvetica Neue', sans-serif;
+$card-bg: #fff;
+$card-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+// Mixins
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin transition($property, $duration) {
+  transition: $property $duration ease-in-out;
+}
+
+// Estilos
+body {
+  font-family: $font-stack;
+  color: $text-color;
+  background: #f4f4f4;
+
+  header {
+    background-color: $primary-color;
+    color: white;
+    padding: 1em 0;
+
+    .header-content {
+      @include flex-center;
+      flex-direction: column;
+
+      h1 {
+        margin: 0;
+
+        a {
+          color: white;
+          text-decoration: none;
+
+          &:hover {
+            color: $secondary-color;
+          }
+        }
+      }
+    }
+
+    nav {
+      ul {
+        list-style: none;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+
+        li {
+          margin: 0 1em;
+
+          a {
+            color: white;
+            text-decoration: none;
+            position: relative;
+
+            &:hover {
+              color: $secondary-color;
+            }
+
+            &::after {
+              content: '';
+              display: block;
+              width: 0;
+              height: 2px;
+              background: $secondary-color;
+              transition: width .3s;
+              position: absolute;
+              bottom: -5px;
+              left: 0;
+            }
+
+            &:hover::after {
+              width: 100%;
+            }
+
+            &.active {
+              border-bottom: 2px solid $secondary-color;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  main {
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 1em;
+      @include flex-center;
+      flex-direction: column;
+
+      .card {
+        background: $card-bg;
+        box-shadow: $card-shadow;
+        border: none;
+        border-radius: 5px;
+        overflow: hidden;
+        margin-bottom: 1em;
+        transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+
+        &:hover {
+          transform: translateY(-5px);
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+        }
+
+        .card-body {
+          padding: 1em;
+          text-align: center;
+
+          h3 {
+            margin-bottom: 0.5em;
+          }
+
+          p {
+            color: $primary-color;
+          }
+        }
+      }
+
+      .icon-box {
+        text-align: center;
+        margin-bottom: 1em;
+
+        img {
+          width: 50px;
+          height: 50px;
+          margin-bottom: 0.5em;
+          transition: transform 0.3s ease-in-out;
+
+          &:hover {
+            transform: scale(1.1);
+          }
+        }
+
+        p {
+          margin: 0;
+        }
+      }
+
+      .subscribe-container {
+        p {
+          font-size: 1.2em;
+          margin-bottom: 0.5em;
+        }
+
+        .btn {
+          background-color: $primary-color;
+          color: white;
+          padding: 0.5em 1em;
+          border: none;
+          border-radius: 5px;
+          cursor: pointer;
+          @include transition(all, 0.3s);
+
+          &:hover {
+            background-color: $secondary-color;
+            transform: translateY(-2px);
+          }
+
+          &:active {
+            transform: translateY(0);
+          }
+        }
+      }
+    }
+
+    .about-us {
+      h2, h3 {
+        color: $primary-color;
+        text-align: center;
+      }
+
+      p, ul {
+        color: $text-color;
+        font-size: 1em;
+        line-height: 1.6;
+      }
+
+      ul {
+        list-style: disc;
+        margin-left: 1em;
+
+        li {
+          margin-bottom: 0.5em;
+        }
+      }
+    }
+  }
+
+  footer {
+    background-color: $primary-color;
+    color: white;
+    padding: 1em 0;
+    text-align: center;
+
+    .social-icons {
+      img {
+        width: 30px;
+        height: 30px;
+        margin: 0 0.5em;
+        @include transition(all, 0.3s);
+
+        &:hover {
+          transform: scale(1.1);
+        }
+      }
+    }
+  }
+
+  .carousel-inner {
+    .carousel-item {
+      height: 500px;
+      background-size: cover;
+      background-position: center center;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+
+  .carousel-control-prev-icon,
+  .carousel-control-next-icon {
+    filter: invert(100%);
+  }
+}
+
+// Media Queries
+@media (max-width: 768px) {
+  .header-content {
+    flex-direction: column;
+  }
+
+  .product-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .carousel-inner {
+    .carousel-item {
+      height: 300px;
+    }
+  }
+
+  main {
+    .container {
+      padding: 0 1em;
+    }
+
+    .about-us {
+      .row {
+        flex-direction: column;
+
+        .col-md-6 {
+          margin-bottom: 1em;
+        }
+      }
+    }
+  }
+}
