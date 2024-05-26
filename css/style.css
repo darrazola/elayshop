@@ -1,195 +1,74 @@
 body {
-  font-family: "Helvetica Neue", sans-serif;
-  color: #333;
-  background: #f4f4f4;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #343a40;
+  background-color: #f8f9fa;
 }
-body header {
-  background-color: #3498db;
-  color: white;
-  padding: 1em 0;
+
+a {
+  color: #007bff;
 }
-body header .header-content {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+a:hover {
+  color: #0062cc;
 }
-body header .header-content h1 {
-  margin: 0;
+
+header, footer {
+  background-color: #343a40;
+  color: #f8f9fa;
 }
-body header .header-content h1 a {
-  color: white;
-  text-decoration: none;
-}
-body header .header-content h1 a:hover {
-  color: #2ecc71;
-}
-body header nav ul {
-  list-style: none;
-  padding: 0;
-  display: flex;
-  justify-content: center;
-}
-body header nav ul li {
-  margin: 0 1em;
-}
-body header nav ul li a {
-  color: white;
-  text-decoration: none;
-  position: relative;
-}
-body header nav ul li a:hover {
-  color: #2ecc71;
-}
-body header nav ul li a::after {
-  content: "";
-  display: block;
-  width: 0;
-  height: 2px;
-  background: #2ecc71;
-  transition: width 0.3s;
-  position: absolute;
-  bottom: -5px;
-  left: 0;
-}
-body header nav ul li a:hover::after {
-  width: 100%;
-}
-body header nav ul li a.active {
-  border-bottom: 2px solid #2ecc71;
-}
-body main .container {
+
+.container {
   max-width: 1200px;
-  margin: 0 auto;
-  padding: 1em;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+  padding: 0 1rem;
 }
-body main .container .card {
-  background: #fff;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  border: none;
-  border-radius: 5px;
-  overflow: hidden;
-  margin-bottom: 1em;
-  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+
+h1, h2, h3 {
+  margin-top: 0;
+  margin-bottom: 1rem;
 }
-body main .container .card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
-}
-body main .container .card .card-body {
-  padding: 1em;
+
+button {
+  display: inline-block;
+  font-weight: 400;
+  color: #f8f9fa;
   text-align: center;
-}
-body main .container .card .card-body h3 {
-  margin-bottom: 0.5em;
-}
-body main .container .card .card-body p {
-  color: #3498db;
-}
-body main .container .icon-box {
-  text-align: center;
-  margin-bottom: 1em;
-}
-body main .container .icon-box img {
-  width: 50px;
-  height: 50px;
-  margin-bottom: 0.5em;
-  transition: transform 0.3s ease-in-out;
-}
-body main .container .icon-box img:hover {
-  transform: scale(1.1);
-}
-body main .container .icon-box p {
-  margin: 0;
-}
-body main .container .subscribe-container p {
-  font-size: 1.2em;
-  margin-bottom: 0.5em;
-}
-body main .container .subscribe-container .btn {
-  background-color: #3498db;
-  color: white;
-  padding: 0.5em 1em;
-  border: none;
-  border-radius: 5px;
+  vertical-align: middle;
   cursor: pointer;
-  transition: all 0.3s ease-in-out;
+  background-color: #007bff;
+  border: 1px solid transparent;
+  padding: 0.5rem 1.5rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  border-radius: 0.25rem;
 }
-body main .container .subscribe-container .btn:hover {
-  background-color: #2ecc71;
-  transform: translateY(-2px);
+button:hover {
+  background-color: #0062cc;
 }
-body main .container .subscribe-container .btn:active {
-  transform: translateY(0);
+
+.card {
+  border: 1px solid #6c757d;
+  border-radius: 0.25rem;
 }
-body main .about-us h2, body main .about-us h3 {
-  color: #3498db;
+.card .card-img-top {
+  border-top-left-radius: 0.25rem;
+  border-top-right-radius: 0.25rem;
+}
+.card .card-body {
+  padding: 1rem;
+}
+
+.icon-box {
   text-align: center;
 }
-body main .about-us p, body main .about-us ul {
-  color: #333;
-  font-size: 1em;
-  line-height: 1.6;
-}
-body main .about-us ul {
-  list-style: disc;
-  margin-left: 1em;
-}
-body main .about-us ul li {
-  margin-bottom: 0.5em;
-}
-body footer {
-  background-color: #3498db;
-  color: white;
-  padding: 1em 0;
-  text-align: center;
-}
-body footer .social-icons img {
-  width: 30px;
-  height: 30px;
-  margin: 0 0.5em;
-  transition: all 0.3s ease-in-out;
-}
-body footer .social-icons img:hover {
-  transform: scale(1.1);
-}
-body .carousel-inner .carousel-item {
-  height: 500px;
-  background-size: cover;
-  background-position: center center;
-}
-body .carousel-inner .carousel-item img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-body .carousel-control-prev-icon,
-body .carousel-control-next-icon {
-  filter: invert(100%);
+.icon-box img {
+  max-width: 50px;
+  margin-bottom: 0.5rem;
 }
 
 @media (max-width: 768px) {
-  .header-content {
-    flex-direction: column;
-  }
-  .product-grid {
-    grid-template-columns: 1fr;
-  }
-  .carousel-inner .carousel-item {
-    height: 300px;
-  }
-  main .container {
-    padding: 0 1em;
-  }
-  main .about-us .row {
-    flex-direction: column;
-  }
-  main .about-us .row .col-md-6 {
-    margin-bottom: 1em;
+  .container {
+    padding: 0 0.5rem;
   }
 }
 

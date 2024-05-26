@@ -6,6 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Descubre nuestra tienda y explora nuestra amplia gama de productos.">
     <meta name="keywords" content="moda, tienda, ropa, accesorios, ElayShop, personalizados">
+    <meta property="og:title" content="ElayShop - Tienda de Moda y Accesorios">
+    <meta property="og:description" content="Explora nuestra tienda y descubre nuestra amplia gama de productos de moda y accesorios.">
+    <meta property="og:image" content="../media/og-image-shop.jpg">
+    <meta property="og:url" content="https://www.elayShop.com/shop.html">
+    <meta name="twitter:card" content="summary_large_image">
     <link rel="icon" href="../media/favicon.ico" type="image/x-icon">
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.css" rel="stylesheet">
@@ -36,35 +41,36 @@
 
     <!-- Main Content -->
     <main class="container mt-3 mb-3">
-        <section class="product-grid">
+        <section class="product-grid" aria-labelledby="productGridTitle">
+            <h2 id="productGridTitle" class="sr-only">Productos Disponibles</h2>
             <div class="row">
                 <div class="col-sm-12 col-md-4 mb-3" data-aos="fade-up">
                     <div class="card">
-                        <img src="../media/productos/accesorios.jpg" alt="Producto 1" class="img-fluid card-img-top">
+                        <img src="../media/productos/accesorios.jpg" alt="Accesorios" class="img-fluid card-img-top" loading="lazy">
                         <div class="card-body">
-                            <h3>Producto 1</h3>
+                            <h3>Accesorios</h3>
                             <p>Precio: $29.99</p>
-                            <button class="btn btn-primary">Añadir al carrito</button>
+                            <button class="btn btn-primary" aria-label="Añadir Accesorios al carrito">Añadir al carrito</button>
                         </div>
                     </div>
                 </div>
                 <div class="col-sm-12 col-md-4 mb-3" data-aos="fade-up">
                     <div class="card">
-                        <img src="../media/productos/deportiva.jpg" alt="Producto 2" class="img-fluid card-img-top">
+                        <img src="../media/productos/deportiva.jpg" alt="Ropa Deportiva" class="img-fluid card-img-top" loading="lazy">
                         <div class="card-body">
-                            <h3>Producto 2</h3>
+                            <h3>Ropa Deportiva</h3>
                             <p>Precio: $34.99</p>
-                            <button class="btn btn-primary">Añadir al carrito</button>
+                            <button class="btn btn-primary" aria-label="Añadir Ropa Deportiva al carrito">Añadir al carrito</button>
                         </div>
                     </div>
                 </div>
                 <div class="col-sm-12 col-md-4 mb-3" data-aos="fade-up">
                     <div class="card">
-                        <img src="../media/productos/regalo.jpg" alt="Producto 3" class="img-fluid card-img-top">
+                        <img src="../media/productos/regalo.jpg" alt="Regalos" class="img-fluid card-img-top" loading="lazy">
                         <div class="card-body">
-                            <h3>Producto 3</h3>
+                            <h3>Regalos</h3>
                             <p>Precio: $39.99</p>
-                            <button class="btn btn-primary">Añadir al carrito</button>
+                            <button class="btn btn-primary" aria-label="Añadir Regalos al carrito">Añadir al carrito</button>
                         </div>
                     </div>
                 </div>
@@ -73,12 +79,12 @@
     </main>
 
     <!-- Footer -->
-    <footer class="bg-dark text-white text-center p-3 mt-3">
+    <footer class="bg-dark text-white text-center p-3 mt-3" role="contentinfo">
         <p>&copy; 2024 ElayShop. Todos los derechos reservados.</p>
         <div>
-            <img src="../media/logos-rrss/icons8-facebook-nuevo-30.png" alt="Facebook" class="img-fluid">
-            <img src="../media/logos-rrss/icons8-instagram-30.png" alt="Instagram" class="img-fluid">
-            <img src="../media/logos-rrss/icons8-whatsapp-30.png" alt="WhatsApp" class="img-fluid">
+            <img src="../media/logos-rrss/icons8-facebook-nuevo-30.png" alt="Facebook" class="img-fluid" loading="lazy">
+            <img src="../media/logos-rrss/icons8-instagram-30.png" alt="Instagram" class="img-fluid" loading="lazy">
+            <img src="../media/logos-rrss/icons8-whatsapp-30.png" alt="WhatsApp" class="img-fluid" loading="lazy">
         </div>
     </footer>
 
